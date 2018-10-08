@@ -2,11 +2,20 @@ class Square
 {
   int xpos; 
   int ypos;
+  int originX; 
+  int originY;
 
   Square(int tempXpos, int tempYpos)
   {
+    originX = tempXpos;
+    originY = tempYpos;
     xpos = tempXpos;
     ypos = tempYpos;
+  }
+  
+  void reset(){
+    xpos = originX; 
+    ypos = originY;
   }
 
   void update(int size, int seed, color terrain) //reminder, have two if statements. one with no seed and one without
